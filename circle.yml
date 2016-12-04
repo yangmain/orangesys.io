@@ -4,13 +4,20 @@ machine:
   timezone:
     Asia/Tokyo
   environment:
+    GOPATH: "/home/ubuntu/.go_workspace"
+    ORG_PATH: "github.com/grafana"
+    REPO_PATH: "${ORG_PATH}/grafana"
+    GODIST: "go1.7.4.linux-amd64.tar.gz"
     PROJECT_NAME: orangesys
     CLOUDSDK_COMPUTE_ZONE: asia-east1-c
     CLUSTER_NAME: orangesysio
     DEBIAN_FRONTEND: noninteractive
-
-  services:
-    - docker
+  post:
+    - mkdir -p download
+    - test -e download/$GODIST || curl -o download/$GODIST https://storage.googleapis.com/golang/$GODIST
+    - sudo rm -rf /usr/local/go
+    - sudo tar -C /usr/local -xzf download/$GODIST
+    - go get -v github.com/spf13/hugo
 
 dependencies:
   pre:
