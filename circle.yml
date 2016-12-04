@@ -21,6 +21,7 @@ machine:
 
 dependencies:
   pre:
+    - hugo version
     - git tag
   post:
     - npm install
