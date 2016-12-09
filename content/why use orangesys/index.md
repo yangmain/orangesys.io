@@ -25,5 +25,5 @@ Nagios is open source. Nagios isn’t free.
 
 
 {{< note title="What next?" >}}
-* [Try Vamp](https://app.orangesys.io)
+* [Try Orangesys](https://app.orangesys.io)
 {{< /note >}}
