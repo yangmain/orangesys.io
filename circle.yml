@@ -21,6 +21,8 @@ dependencies:
     - git tag
   post:
     - npm install
+  override:
+    - /bin/true
 
 test:
   override:
