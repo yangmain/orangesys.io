@@ -37,5 +37,6 @@ deployment:
     commands:
       - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update
       - echo $GCLOUD_SERVICE_KEY | base64 --decode -i > ${HOME}/account-auth.json
+      - sudo /opt/google-cloud-sdk/bin/gcloud config set project $PROJECT_NAME
       - sudo /opt/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file ${HOME}/account-auth.json
-      - sudo /opt/google-cloud-sdk/bin/gcloud -q preview app deploy app.yaml --project ${PROJECT_NAME} --promote --version ${CIRCLE_SHA1}
+      - sudo /opt/google-cloud-sdk/bin/gcloud -q preview app deploy app.yaml --promote --version ${CIRCLE_SHA1}
