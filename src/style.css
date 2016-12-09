@@ -632,13 +632,13 @@ body {
     background-size: contain; }
     .button__icon--arrow {
       width: 30px;
-      background-image: url("../img/003-Small-icons/Red/Red-Arrow.svg"); }
+      background-image: url("../img/003-small-icons/red/red-arrow.svg"); }
     .button__icon--arrow-white {
-      background-image: url("../img/003-Small-icons/White/Arrow-White.svg"); }
+      background-image: url("../img/003-small-icons/white/arrow-white.svg"); }
     .button__icon--mail {
-      background-image: url("../img/003-Small-icons/White/Mail-White.svg"); }
+      background-image: url("../img/003-small-icons/white/mail-white.svg"); }
   .button:hover .button__icon--arrow {
-    background-image: url("../img/003-Small-icons/White/Arrow-White.svg"); }
+    background-image: url("../img/003-small-icons/white/arrow-white.svg"); }
   .button--grey {
     background-color: #4E98D1;
     color: white; }
@@ -1225,21 +1225,21 @@ body {
     background-color: #F7F8F9;
     border-color: #FAAC19; }
     .admonition.note .admonition-icon-image {
-      background-image: url("../img/003-Small-icons/Notes/note.svg"); }
+      background-image: url("../img/003-small-icons/Notes/note.svg"); }
     .admonition.note .admonition-title {
       color: #234B5F; }
   .admonition.warning {
     background-color: #FEF0D5;
     border-color: #F9B32E; }
     .admonition.warning .admonition-icon-image {
-      background-image: url("../img/003-Small-icons/Notes/warning.svg"); }
+      background-image: url("../img/003-small-icons/Notes/warning.svg"); }
     .admonition.warning .admonition-title {
       color: #F9B32E; }
   .admonition.tip {
     background-color: #dcf7f0;
     border-color: #1AA379; }
     .admonition.tip .admonition-icon-image {
-      background-image: url("../img/003-Small-icons/Notes/tip.svg"); }
+      background-image: url("../img/003-small-icons/Notes/tip.svg"); }
     .admonition.tip .admonition-title {
       color: #1AA379; }
 

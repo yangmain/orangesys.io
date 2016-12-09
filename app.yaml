@@ -19,7 +19,6 @@ skip_files: |
   (.*~)|
   (.*\.py[co])|
   (.*\.po)|
-  (.*\.json)|
   (.*\.pot)|
   (\..*)|
   (manage\.py)|
