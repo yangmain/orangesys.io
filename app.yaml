@@ -3,20 +3,6 @@ api_version: go1
 threadsafe: true
 
 handlers:
-- url: /
-  static_files: public/index.html
-  upload: /
-- url: /css
-  static_dir: public/css
-- url: /fonts
-  static_dir: public/fonts
-- url: /js
-  static_dir: public/js
-- url: /img
-  static_dir: public/img
-- url: /(.*)/$
-  static_files: public/\1/index.html
-  upload: .*\.html$
 - url: /.*
   script: _go_app
 

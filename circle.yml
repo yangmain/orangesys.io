@@ -19,6 +19,7 @@ dependencies:
   pre:
     - hugo version
     - git tag
+    - SHORT_SHA1=$(echo $CIRCLE_SHA1|cut -c1-7)
     - npm install -g gulp
     - npm install
   override:
@@ -41,4 +42,4 @@ deployment:
       - echo $GCLOUD_SERVICE_KEY | base64 --decode -i > ${HOME}/account-auth.json
       - sudo /opt/google-cloud-sdk/bin/gcloud config set project $PROJECT_NAME
       - sudo /opt/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file ${HOME}/account-auth.json
-      - sudo /opt/google-cloud-sdk/bin/gcloud -q app deploy app.yaml --promote --version ${CIRCLE_SHA1}
+      - sudo /opt/google-cloud-sdk/bin/gcloud -q app deploy app.yaml --promote --version ${SHORT_SHA1}

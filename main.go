@@ -1,14 +1,7 @@
 package main
 
-import (
-	"net/http"
-)
+import "net/http"
 
 func init() {
-	http.HandleFunc("/", handler)
+	http.Handle("/", http.FileServer(http.Dir("public")))
 }
-
-func handler(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "/", http.StatusFound)
-}
-
