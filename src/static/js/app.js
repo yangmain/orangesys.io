@@ -127,7 +127,7 @@ function getMenuFile(callback) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
   }
-  
+
   buildSearch();
 }
 
@@ -142,7 +142,7 @@ function menuFileLoaded(data) {
     allowParentLinks: false,
     closedSymbol: '&#xf105;',
     openedSymbol: '&#xf107;',
-    brand: '<a href="'+theBaseUrl+'/"><img id="logo" class="logo" src="'+theBaseUrl+'/img/005-vamp/Logo/logo-long-colour.svg" alt=""></a>'
+    brand: '<a href="'+theBaseUrl+'/"><img id="logo" class="logo" src="'+theBaseUrl+'/img/005-vamp/logo/logo-long-colour.svg" alt=""></a>'
   }
 
   $(function(){
@@ -280,7 +280,7 @@ function buildSearch() {
     console.log(error);
   });
 
-  
+
   $('.search-bar__input').keydown($.debounce(250, function( event ) {
     if ( event.which == 13 ) {
       event.preventDefault();
@@ -301,7 +301,7 @@ function buildSearch() {
 
   }));
 
-  
+
   $('.search-button').click(function(event) {
     $('#search').toggleClass('active');
     $('.search-bar__input').focus();
@@ -325,7 +325,7 @@ function buildSearch() {
     if (e.keyCode == 13) {
 
     }
-  
+
   });
 
   function exitSearch(event) {
@@ -337,9 +337,3 @@ function buildSearch() {
 
   }
 }
-
-
-
-
-
-
