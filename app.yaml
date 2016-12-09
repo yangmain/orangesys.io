@@ -43,6 +43,7 @@ skip_files: |
   (content\/.*)|
   (data\/.*)|
   (static\/.*)|
+  (themes\/.*)|
   (src\/.*)|
   (node_modules\/.*)|
   (layouts\/.*)|
