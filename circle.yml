@@ -19,6 +19,7 @@ dependencies:
   pre:
     - hugo version
     - git tag
+    - npm install -g gulp
     - npm install
   override:
     - /bin/true
