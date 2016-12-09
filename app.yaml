@@ -1,0 +1,47 @@
+application: orange-sys
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /
+  static_files: public/index.html
+  upload: /
+- url: /css
+  static_dir: public/css
+- url: /fonts
+  static_dir: public/fonts
+- url: /js
+  static_dir: public/js
+- url: /img
+  static_dir: public/img
+- url: /(.*)/$
+  static_files: public/\1/index.html
+  upload: .*\.html$
+- url: /.*
+  script: _go_app
+
+skip_files: |
+  ^(.*/)?(
+  (archetypes/.*)|
+  (app\.yaml)|
+  (app\.yml)|
+  (index\.yaml)|
+  (index\.yml)|
+  (config\.yaml)|
+  (#.*#)|
+  (.*~)|
+  (.*\.py[co])|
+  (.*\.po)|
+  (.*\.pot)|
+  (\..*)|
+  (manage\.py)|
+  (README\.md)|
+  (LICENSE)|
+  (content\/.*)|
+  (data\/.*)|
+  (static\/.*)|
+  (layouts\/.*)|
+  (\.git\/.*)|
+  (\.gitignore)|
+  )$
