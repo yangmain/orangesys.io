@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/orangesys/orangesys.io.svg?style=svg)](https://circleci.com/gh/orangesys/orangesys.io)
 # New orangesys.io
 
 Web theme is based on [magneticio/vamp.io](https://github.com/magneticio/vamp.io) site.
