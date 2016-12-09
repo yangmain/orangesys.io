@@ -33,7 +33,6 @@ skip_files: |
   (.*~)|
   (.*\.py[co])|
   (.*\.po)|
-  (.*\.js)|
   (.*\.json)|
   (.*\.pot)|
   (\..*)|
@@ -43,7 +42,6 @@ skip_files: |
   (content\/.*)|
   (data\/.*)|
   (static\/.*)|
-  (themes\/.*)|
   (src\/.*)|
   (node_modules\/.*)|
   (layouts\/.*)|
