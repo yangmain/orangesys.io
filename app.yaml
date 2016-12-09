@@ -28,10 +28,13 @@ skip_files: |
   (index\.yaml)|
   (index\.yml)|
   (config\.yaml)|
+  (circle\.yml)|
   (#.*#)|
   (.*~)|
   (.*\.py[co])|
   (.*\.po)|
+  (.*\.js)|
+  (.*\.json)|
   (.*\.pot)|
   (\..*)|
   (manage\.py)|
@@ -40,6 +43,8 @@ skip_files: |
   (content\/.*)|
   (data\/.*)|
   (static\/.*)|
+  (src\/.*)|
+  (node_modules\/.*)|
   (layouts\/.*)|
   (\.git\/.*)|
   (\.gitignore)|
