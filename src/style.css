@@ -1055,7 +1055,6 @@ body {
   .top-menu .logo {
     height: 40px;
     width: 120px;
-    background-image: url("../img/005-vamp/Logo/logo-long-white.svg");
     background-size: contain; }
   .top-menu .right {
     display: flex;
@@ -1091,8 +1090,6 @@ body {
   background-color: white;
   border-bottom: none;
   box-shadow: 0 4px 2px -2px rgba(55, 71, 79, 0.25); }
-  .top-menu.active .logo {
-    background-image: url("../img/005-vamp/logo/logo-long-colour.svg"); }
   .top-menu.active .top-menu-item {
     color: #37474F; }
   .top-menu.active .github-logo {
