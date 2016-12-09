@@ -19,7 +19,6 @@ dependencies:
   pre:
     - hugo version
     - git tag
-  post:
     - npm install
   override:
     - /bin/true
