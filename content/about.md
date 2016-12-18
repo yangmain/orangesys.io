@@ -12,4 +12,4 @@ Orangesys is Cloud and DevOps Empower Your Business.
 - DevOpsとは、ソフトウェアの開発担当と導入・運用担当が密接に協力する体制を構築し、ソフトウェアの導入や更新を迅速に進めること。
 
 ## Contact
-You can contact us [here](/contact/)
+You can contact us please [contact us](mailto:hello@orangesys.io)
