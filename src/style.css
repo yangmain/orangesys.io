@@ -1049,13 +1049,6 @@ body {
       display: flex; } }
   .top-menu a {
     text-decoration: none; }
-  .top-menu .left {
-    display: flex;
-    align-items: center; }
-  .top-menu .logo {
-    height: 40px;
-    width: 120px;
-    background-size: contain; }
   .top-menu .right {
     display: flex;
     align-items: center;
