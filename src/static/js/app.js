@@ -142,7 +142,6 @@ function menuFileLoaded(data) {
     allowParentLinks: false,
     closedSymbol: '&#xf105;',
     openedSymbol: '&#xf107;',
-    brand: '<a href="'+theBaseUrl+'/"><img id="logo" class="logo" src="'+theBaseUrl+'/img/005-vamp/logo/logo-long-colour.svg" alt=""></a>'
   }
 
   $(function(){
