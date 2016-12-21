@@ -4,7 +4,7 @@
       "path": "about",
       "text": "About",
       "visible": false
-    },     
+    },
     {
       "path": "index.json",
       "text": "Index.json",
@@ -87,7 +87,7 @@
             {
               "path": "documentation/how-orangesys-works/architecture-and-components",
               "text": "Architecture and components",
-              "visible": false
+              "visible": true
             },
             {
               "path": "documentation/how-orangesys-works/requirements",
@@ -96,7 +96,7 @@
             }
           ],
           "text": "How Orangesys works",
-          "visible": false
+          "visible": true
         },
         {
           "path": "documentation/installation",
