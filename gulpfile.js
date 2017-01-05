@@ -91,6 +91,7 @@ gulp.task('clean:start', function() {
 
 gulp.task('move:js', ['dependencies'], function() {
   return gulp.src('./themes/vamp-theme/layouts/js/*.js')
+    .pipe(uglify())
     .pipe(gulp.dest('./themes/vamp-theme/static/js'))
 });
 
@@ -159,4 +160,3 @@ gulp.task('hugo', ['dependencies', 'build-search-index'], shell.task(['hugo']));
 gulp.task('build:prod', ['build:files', 'set-base:production', 'images', 'build-search-index', 'hugo']);
 gulp.task('build:dev', ['build:files', 'set-base:development', 'images', 'build-search-index', 'hugo']);
 gulp.task('build:files', ['dependencies', 'move:js', 'move:css', 'move:fonts', 'clean:moved', 'move:menu', 'move:rest', 'move:toml']);
-
