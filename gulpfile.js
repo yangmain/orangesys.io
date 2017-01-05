@@ -91,7 +91,6 @@ gulp.task('clean:start', function() {
 
 gulp.task('move:js', ['dependencies'], function() {
   return gulp.src('./themes/vamp-theme/layouts/js/*.js')
-    .pipe(uglify())
     .pipe(gulp.dest('./themes/vamp-theme/static/js'))
 });
 
