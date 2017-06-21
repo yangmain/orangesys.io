@@ -31,9 +31,9 @@ sudo dpkg -i telegraf-1.3.2_linux_amd64.tar.gz
   hostname = "tele-test01"
   omit_hostname = false
 [[outputs.orangesys]]
-  urls = ["https://demo.i.orangesys.io] #dashboardに表示されるurlを入れてください
-  jwt_token= <jwt_token> #dashboardに表示される<jwt_token>をいれてください
-  database = "telegraf"  # デフォルト設定、その意外のDBへアクセスできません
+  urls = ["https://demo.i.orangesys.io] # 管理画面に表示されるurlを入れてください
+  jwt_token= <jwt_token> # 管理画面に表示される<jwt_token>をいれてください
+  database = "telegraf"  # 変更できません
   retention_policy = ""
   write_consistency = "any"
   timeout = "5s"
