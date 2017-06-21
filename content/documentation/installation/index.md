@@ -11,7 +11,7 @@ title: Installation
 
 #### ansible galaxy install
 * ansible-galaxy install orangesys.telegraf
-[orangesys.telegraf](https://galaxy.ansible.com/orangesys/telegraf/)
+* [orangesys.telegraf](https://galaxy.ansible.com/orangesys/telegraf/)
 
 #### Install orangesys agent 手動インストール
 * [Ubuntu & Debian](/documentation/installation/ubuntu-debian)
