@@ -1,28 +1,18 @@
 ---
-date: 2016-11-22T09:00:00+00:00
+date: 2017-06-21T09:00:00+00:00
 title: Installation
 ---
 
-### Ubuntu
+### Ubuntu & Debian
 
 >```
- curl -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add -
- source /etc/lsb-release
- echo "deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
+wget https://github.com/orangesys/telegraf-output-orangesys/releases/download/1.3.2/telegraf-1.3.2_linux_amd64.tar.gz
+sudo dpkg -i telegraf-1.3.2_linux_amd64.tar.gz
 >```
 
-### Debian
+### telegraf.conf設定例
 
->```
- curl -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add -
- source /etc/os-release
- test $VERSION_ID = "7" && echo "deb https://repos.influxdata.com/debian wheezy stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
- test $VERSION_ID = "8" && echo "deb https://repos.influxdata.com/debian jessie stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
->```
-
-### telegraf.conf設定
-
-登録後、jwt tokenを表示します。
+登録後、jwt_tokenを表示します。
 
 >```
 [global_tags]
@@ -40,9 +30,10 @@ title: Installation
   logfile = ""
   hostname = "tele-test01"
   omit_hostname = false
-[[outputs.influxdb]]
-  urls = ["https://demo.i.orangesys.io/?jwt=<jwt token>"] #dashboardに表示される<jwt token>をいれてください
-  database = "telegraf" # デフォルト設定、その意外のDBへアクセスできません
+[[outputs.orangesys]]
+  urls = ["https://demo.i.orangesys.io] #dashboardに表示されるurlを入れてください
+  jwt_token= <jwt_token> #dashboardに表示される<jwt_token>をいれてください
+  database = "telegraf"  # デフォルト設定、その意外のDBへアクセスできません
   retention_policy = ""
   write_consistency = "any"
   timeout = "5s"
@@ -64,16 +55,14 @@ title: Installation
 [[outputs.influxdb]]
 >```
 
-### サービス起動
+### サービス再起動
 
 >```
-  sudo apt-get update && sudo apt-get install telegraf
   sudo service telegraf start
 >```
 
 #### Ubuntu 15.04+, Debian 8+
 
 >```
-  sudo apt-get update && sudo apt-get install telegraf
   sudo systemctl start telegraf
 >```

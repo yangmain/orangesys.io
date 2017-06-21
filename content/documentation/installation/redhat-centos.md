@@ -1,19 +1,13 @@
 ---
-date: 2016-11-22T09:00:00+00:00
+date: 2017-06-21T09:00:00+00:00
 title: Installation
 ---
 
 ### Redhat & Centos & Amazon Linux
 
 >```
- cat <<EOF | sudo tee /etc/yum.repos.d/influxdb.repo
- [influxdb]
- name = InfluxDB Repository - RHEL \$releasever
- baseurl = https://repos.influxdata.com/rhel/\$releasever/\$basearch/stable
- enabled = 1
- gpgcheck = 1
- gpgkey = https://repos.influxdata.com/influxdb.key
- EOF
+ wget　https://github.com/orangesys/telegraf-output-orangesys/releases/download/1.3.2/telegraf-1.3.2-1.x86_64.rpm
+ sudo yum localinstall telegraf-1.3.2-1.x86_64.rpm
 >```
 
 ### telegraf.conf設定
@@ -36,7 +30,7 @@ title: Installation
   logfile = ""
   hostname = "tele-test01"
   omit_hostname = false
-[[outputs.influxdb]]
+[[outputs.orangesys]]
   urls = ["https://demo.i.orangesys.io/?jwt=<jwt token>"] #dashboardに表示される<jwt token>をいれてください
   database = "telegraf" # デフォルト設定、その意外のDBへアクセスできません
   retention_policy = ""
@@ -60,16 +54,14 @@ title: Installation
 [[outputs.influxdb]]
 >```
 
-### サービス起動
+### サービス再起動
 
 >```
- sudo yum install telegraf
  sudo service telegraf start
 >```
 
 #### CentOS 7+, RHEL 7+
 
 >```
-  sudo yum install telegraf
   sudo systemctl start telegraf
 >```
