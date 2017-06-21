@@ -38,6 +38,6 @@ deployment:
       - echo $GCLOUD_SERVICE_KEY | base64 --decode -i > ${HOME}/account-auth.json
       - sudo /opt/google-cloud-sdk/bin/gcloud config set project $PROJECT_NAME
       - sudo /opt/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file ${HOME}/account-auth.json
-      - sudo /opt/google-cloud-sdk/bin/gcloud -q app deploy app.yaml --promote --version ${SHORT_HASH}
+      - sudo /opt/google-cloud-sdk/bin/gcloud -q app deploy app.yaml --promote --version=${SHORT_HASH}
       - |
         curl -s -S -X POST --data-urlencode "payload={'channel': '#ops', 'text': ':earth_asia: :fire: release $CIRCLE_PROJECT_REPONAME (SHA1 $SHORT_HASH) completed (build $CIRCLE_BUILD_NUM)' }" $SLACK_OPS >/dev/null
