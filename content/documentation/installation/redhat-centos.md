@@ -31,7 +31,8 @@ title: Installation
   hostname = "tele-test01"
   omit_hostname = false
 [[outputs.orangesys]]
-  urls = ["https://demo.i.orangesys.io/?jwt=<jwt token>"] #dashboardに表示される<jwt token>をいれてください
+  urls = ["https://demo.i.orangesys.io] #dashboardに表示されるurlを入れてください
+  jwt_token= <jwt_token> #dashboardに表示される<jwt_token>をいれてください
   database = "telegraf" # デフォルト設定、その意外のDBへアクセスできません
   retention_policy = ""
   write_consistency = "any"
