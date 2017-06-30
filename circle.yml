@@ -1,26 +1,21 @@
 machine:
   node:
     version: 6.9.1
+  go:
+    version: 1.8.1
   timezone:
     Asia/Tokyo
   environment:
     GOPATH: "/home/ubuntu/.go_workspace"
-    GODIST: "go1.7.4.linux-amd64.tar.gz"
     PROJECT_NAME: www-orangesys-io
     CLOUDSDK_COMPUTE_ZONE: asia-northeast1-c
     SHORT_HASH: $(echo $CIRCLE_SHA1 | cut -c -7)
-  post:
-    - mkdir -p download
-    - test -e download/$GODIST || curl -o download/$GODIST https://storage.googleapis.com/golang/$GODIST
-    - sudo rm -rf /usr/local/go
-    - sudo tar -C /usr/local -xzf download/$GODIST
 
 dependencies:
   pre:
-    - wget https://github.com/spf13/hugo/releases/download/v0.18.1/hugo_0.18.1-64bit.deb
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.24.1/hugo_0.24.1_Linux-64bit.deb
     - sudo dpkg -i hugo_0.18.1-64bit.deb
     - hugo version
-    - git tag
     - npm install -g gulp
     - npm install
   override:
