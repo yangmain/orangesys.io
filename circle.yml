@@ -14,7 +14,7 @@ machine:
 dependencies:
   pre:
     - wget https://github.com/gohugoio/hugo/releases/download/v0.24.1/hugo_0.24.1_Linux-64bit.deb
-    - sudo dpkg -i hugo_0.18.1-64bit.deb
+    - sudo dpkg -i hugo_0.24.1_Linux-64bit.deb
     - hugo version
     - npm install -g gulp
     - npm install
