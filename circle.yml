@@ -14,11 +14,11 @@ machine:
 
 dependencies:
   pre:
-    - wget https://github.com/gohugoio/hugo/releases/download/v${GOHUGOVERSION}/hugo_${GOHUGOVERSION}-64bit.deb
-    - sudo dpkg -i hugo_${GOHUGOVERSION}-64bit.deb
+    - wget https://github.com/gohugoio/hugo/releases/download/v${GOHUGOVERSION}/hugo_${GOHUGOVERSION}_Linux-64bit.deb
+    - sudo dpkg -i hugo_${GOHUGOVERSION}_Linux-64bit.deb
     - hugo version
-    - npm install -g gulp
-    - npm install
+    - npm install -g gulp yarn
+    - yarn
   override:
     - /bin/true
 
