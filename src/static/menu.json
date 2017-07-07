@@ -28,66 +28,39 @@
       "visible": false
     },
     {
-      "path": "why-use-orangesys",
-      "text": "Why use Orangesys?",
-      "visible": true,
+      "path": "documentation/why-use-orangesys",
       "children": [
         {
-          "path": "why-use-orangesys",
-          "text": "Why use Orangesys",
-          "visible": true
-        },
-        {
-          "path": "why-use-orangesys/pricing",
-          "text": "Pricing",
+          "path": "documentation/why-use-orangesys",
+          "text": "Why use Orangesys?",
           "visible": true,
           "children": [
             {
-              "path": "index",
-              "text": "index",
-              "visible": false
+              "path": "documentation/why-use-orangesys",
+              "text": "Why use Orangesys",
+              "visible": true
+            },
+            {
+              "path": "documentation/why-use-orangesys/pricing",
+              "text": "Pricing",
+              "visible": true,
+              "children": [
+                {
+                  "path": "index",
+                  "text": "index",
+                  "visible": false
+                }
+              ]
             }
           ]
         },
-        {
-          "path": "why-use-orangesys/use-cases",
-          "children": [
-            {
-              "path": "index",
-              "text": "Index",
-              "visible": false
-            },
-            {
-              "path": "why-use-orangesys/use-cases/create-responsive-website",
-              "text": "Create a responsive website",
-              "visible": false
-            },
-            {
-              "path": "why-use-orangesys/use-cases/resolve-incompatibilities-after-upgrade",
-              "text": "Resolve incompatibilities",
-              "visible": false
-            },
-            {
-              "path": "why-use-orangesys/use-cases/refactor-monolithic-to-microsystems",
-              "text": "Refactor to microservices",
-              "visible": false
-            }
-            ],
-          "text": "Use cases",
-          "visible": false
-        }
-      ]
-    },
-    {
-      "path": "documentation/how-orangesys-works/architecture-and-components",
-      "children": [
         {
           "path": "documentation/how-orangesys-works/architecture-and-components",
           "children": [
             {
               "path": "documentation/how-orangesys-works/architecture-and-components",
               "text": "Architecture and components",
-              "visible": true
+              "visible": false
             },
             {
               "path": "documentation/how-orangesys-works/requirements",
@@ -96,7 +69,7 @@
             }
           ],
           "text": "How Orangesys works",
-          "visible": true
+          "visible": false
         },
         {
           "path": "documentation/installation",
@@ -158,11 +131,6 @@
         }
         ],
       "text": "Documentation",
-      "visible": true
-    },
-    {
-      "path": "support",
-      "text": "Support",
       "visible": true
     }
   ]
