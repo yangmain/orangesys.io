@@ -15,7 +15,7 @@ Web theme is based on [magneticio/vamp.io](https://github.com/magneticio/vamp.io
 
 3. Build the vamp-theme by installing node modules and running gulp
 
-        $ npm install && gulp build:dev
+        $ npm install -g yarn && yarn && gulp build:dev
 
 
 4. Run hugo in watch mode and start adding content under the `content/` tree
