@@ -7,7 +7,7 @@ machine:
     Asia/Tokyo
   environment:
     GOPATH: "/home/ubuntu/.go_workspace"
-    PROJECT_NAME: www-orangesys-io
+    PROJECT_NAME: saas-orangesys-io
     CLOUDSDK_COMPUTE_ZONE: asia-northeast1-c
     SHORT_HASH: $(echo $CIRCLE_SHA1 | cut -c -7)
     GOHUGOVERSION: "0.25.1"
