@@ -7,20 +7,16 @@ machine:
     Asia/Tokyo
   environment:
     GOPATH: "/home/ubuntu/.go_workspace"
-    PROJECT_NAME: saas-orangesys-io
+    GCE_PROJECT: saas-orangesys-io
     CLOUDSDK_COMPUTE_ZONE: asia-northeast1-c
     SHORT_HASH: $(echo $CIRCLE_SHA1 | cut -c -7)
     GOHUGOVERSION: "0.25.1"
-    LEGOVERSION: "0.4.0"
 
 dependencies:
   pre:
     - wget https://github.com/gohugoio/hugo/releases/download/v${GOHUGOVERSION}/hugo_${GOHUGOVERSION}_Linux-64bit.deb
-    - sudo dpkg -i hugo_${GOHUGOVERSION}_Linux-64bit.deb
+    - sudo dpkg -i hugo_${GOHUGOVERSION}_Linux-64bit.deb && rm -f hugo_${GOHUGOVERSION}_Linux-64bit.deb
     - hugo version
-    - wget https://github.com/xenolf/lego/releases/download/v${LEGOVERSION}/lego_linux_amd64.tar.xz
-    - tar xvJf lego_linux_amd64.tar.xz
-    - ./lego_linux_amd64 -v
     - npm install -g gulp yarn
     - yarn
   override:
@@ -36,7 +32,7 @@ deployment:
     commands:
       - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update
       - echo $GCLOUD_SERVICE_KEY | base64 --decode -i > ${HOME}/account-auth.json
-      - sudo /opt/google-cloud-sdk/bin/gcloud config set project $PROJECT_NAME
+      - sudo /opt/google-cloud-sdk/bin/gcloud config set project $GCE_PROJECT
       - sudo /opt/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file ${HOME}/account-auth.json
       - sudo /opt/google-cloud-sdk/bin/gcloud -q app deploy app.yaml --promote --version=${SHORT_HASH}
       - |
