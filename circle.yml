@@ -11,15 +11,12 @@ machine:
     CLOUDSDK_COMPUTE_ZONE: asia-northeast1-c
     SHORT_HASH: $(echo $CIRCLE_SHA1 | cut -c -7)
     GOHUGOVERSION: "0.25.1"
-    LEGOVERSION: "0.4.0"
 
 dependencies:
   pre:
     - wget https://github.com/gohugoio/hugo/releases/download/v${GOHUGOVERSION}/hugo_${GOHUGOVERSION}_Linux-64bit.deb
     - sudo dpkg -i hugo_${GOHUGOVERSION}_Linux-64bit.deb && rm -f hugo_${GOHUGOVERSION}_Linux-64bit.deb
     - hugo version
-    - cd ~/bin/ && wget -qO- https://github.com/xenolf/lego/releases/download/v${LEGOVERSION}/lego_linux_amd64.tar.xz | tar xvJ lego_linux_amd64
-    - lego_linux_amd64 -v
     - npm install -g gulp yarn
     - yarn
   override:
@@ -30,20 +27,6 @@ test:
     - gulp build:prod
 
 deployment:
-  renew-ssl:
-    branch: renew-ssl
-    commands:
-      - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update
-      - echo $GCLOUD_SERVICE_KEY | base64 --decode -i > ${HOME}/account-auth.json
-      - sudo /opt/google-cloud-sdk/bin/gcloud config set project $GCE_PROJECT
-      - sudo /opt/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file ${HOME}/account-auth.json      
-      - |
-        GOOGLE_APPLICATION_CREDENTIALS="${HOME}/account-auth.json" \
-        lego_linux_amd64 --dns-timeout=90 --dns=gcloud \
-          --domains=orangesys.io \
-          --domains=www.orangesys.io \
-          --email=hello@orangesys.io --accept-tos run
-
   release:
     branch: release
     commands:
