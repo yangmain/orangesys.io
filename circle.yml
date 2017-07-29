@@ -18,9 +18,8 @@ dependencies:
     - wget https://github.com/gohugoio/hugo/releases/download/v${GOHUGOVERSION}/hugo_${GOHUGOVERSION}_Linux-64bit.deb
     - sudo dpkg -i hugo_${GOHUGOVERSION}_Linux-64bit.deb
     - hugo version
-    - wget https://github.com/xenolf/lego/releases/download/v${LEGOVERSION}/lego_linux_amd64.tar.xz
-    - tar xvJf lego_linux_amd64.tar.xz
-    - ./lego_linux_amd64 -v
+    - cd ~/bin/ && wget -qO- https://github.com/xenolf/lego/releases/download/v${LEGOVERSION}/lego_linux_amd64.tar.xz | tar xvJ lego_linux_amd64
+    - lego_linux_amd64 -v
     - npm install -g gulp yarn
     - yarn
   override:
