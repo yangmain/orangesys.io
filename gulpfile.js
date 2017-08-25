@@ -157,5 +157,6 @@ gulp.task('build-search-index',['dependencies'], shell.task(['node ./buildSearch
 gulp.task('hugo', ['dependencies', 'build-search-index'], shell.task(['hugo']));
 
 gulp.task('build:prod', ['build:files', 'set-base:production', 'images', 'build-search-index', 'hugo']);
+gulp.task('build:theme', ['build:files', 'set-base:production', 'images', 'build-search-index']);
 gulp.task('build:dev', ['build:files', 'set-base:development', 'images', 'build-search-index', 'hugo']);
 gulp.task('build:files', ['dependencies', 'move:js', 'move:css', 'move:fonts', 'clean:moved', 'move:menu', 'move:rest', 'move:toml']);
