@@ -1,6 +1,6 @@
 machine:
   node:
-    version: 6.9.1
+    version: 8.4.0
   go:
     version: 1.8.1
   timezone:
@@ -10,17 +10,15 @@ machine:
     GCE_PROJECT: saas-orangesys-io
     CLOUDSDK_COMPUTE_ZONE: asia-northeast1-c
     SHORT_HASH: $(echo $CIRCLE_SHA1 | cut -c -7)
-    GOHUGOVERSION: "0.25.1"
+    GOHUGOVERSION: "0.26"
 
 dependencies:
-  pre:
+  override:
     - wget https://github.com/gohugoio/hugo/releases/download/v${GOHUGOVERSION}/hugo_${GOHUGOVERSION}_Linux-64bit.deb
     - sudo dpkg -i hugo_${GOHUGOVERSION}_Linux-64bit.deb && rm -f hugo_${GOHUGOVERSION}_Linux-64bit.deb
     - hugo version
-    - npm install -g gulp yarn
-    - yarn
-  override:
-    - /bin/true
+    - npm install -g gulp yarn --quiet
+    - yarn install --pure-lockfile --no-progress
 
 test:
   override:
