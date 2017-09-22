@@ -22,7 +22,8 @@ dependencies:
 
 test:
   override:
-    - gulp build:prod
+    - gulp build:theme
+    - hugo
 
 deployment:
   release:
