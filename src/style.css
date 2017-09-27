@@ -1096,7 +1096,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 9999;
-  border-bottom: 1px solid #C3D2DC; }
+  border-bottom: 1px solid #F0F5FA; }
   @media all and (min-width: 1025px) {
     .slicknav_menu {
       display: none; } }
@@ -1139,13 +1139,13 @@ body {
     margin-top: 40px; }
 
 .top-bar {
-  border-top: 1px solid #C3D2DC; }
+  border-top: 1px solid #F0F5FA; }
 
 .footer {
   position: relative;
   z-index: 999; }
   .footer .text, .footer .markdowned li, .markdowned .footer li, .footer .markdowned td, .markdowned .footer td, .footer .date {
-    color: #C3D2DC !important; }
+    color: #F0F5FA !important; }
   .footer .h2 {
     font-weight: 300; }
   .footer a {
@@ -1165,7 +1165,7 @@ body {
   padding: 20px 0;
   border-top: 1px solid rgba(55, 100, 125, 0.3); }
   .footer-bottom .text, .footer-bottom .markdowned li, .markdowned .footer-bottom li, .footer-bottom .markdowned td, .markdowned .footer-bottom td, .footer-bottom .date {
-    color: #C3D2DC !important; }
+    color: #F0F5FA !important; }
   .footer-bottom .container {
     display: flex;
     justify-content: space-between; }
@@ -1458,7 +1458,7 @@ pre + pre {
     display: none; }
   .copy-button.zeroclipboard-is-hover {
     transition: 0.1s ease-in all;
-    background-color: #C3D2DC;
+    background-color: #F0F5FA;
     cursor: pointer;
     color: white; }
   .copy-button.clicked {
