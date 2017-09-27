@@ -89,10 +89,11 @@ jobs:
       - run:
           name: Deploy to Google App Engine
           command: |
+            echo release $SHORT_HASH
             echo $GCLOUD_SERVICE_KEY | base64 --decode -i > ${HOME}/account-auth.json
             gcloud auth activate-service-account --key-file ${HOME}/account-auth.json
             gcloud -q config set project $GCE_PROJECT
-            gcloud -q app deploy app.yaml --promote --version=${SHORT_HASH}
+            gcloud -q app deploy app.yaml --promote --version=$SHORT_HASH
             curl -s -S -X POST --data-urlencode "payload={'channel': '#ops', 'text': ':earth_asia: :fire: release $CIRCLE_PROJECT_REPONAME (SHA1 ${SHORT_HASH} completed (build $CIRCLE_BUILD_NUM)' }" $SLACK_OPS >/dev/null
 workflows:
   version: 2
