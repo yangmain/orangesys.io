@@ -71,6 +71,14 @@ jobs:
       - run:
           name: Run hugo
           command: hugo
+      - run:
+          command: |
+            mkdir -p /tmp/workspace/app
+            mv * .[!.]* /tmp/workspace/app/
+      - persist_to_workspace:
+          root: *workspace_root
+          paths:
+            - app          
 
   deploy:
     <<: *container_config
