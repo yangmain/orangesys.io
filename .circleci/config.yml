@@ -88,7 +88,6 @@ jobs:
       - run:
           name: Deploy to Google App Engine
           command: |
-            echo release $SHORT_HASH
             echo $GCLOUD_SERVICE_KEY | base64 --decode -i > ${HOME}/account-auth.json
             gcloud auth activate-service-account --key-file ${HOME}/account-auth.json
             gcloud -q config set project $GCE_PROJECT
