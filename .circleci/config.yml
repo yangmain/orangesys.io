@@ -81,7 +81,7 @@ jobs:
     docker:
       - image: google/cloud-sdk
         environment:
-          PROJECT_NAME: orangesys
+          GCE_PROJECT: saas-orangesys-io
           SHORT_HASH: $(echo $CIRCLE_SHA1 | cut -c -7)
     steps:
       - *attach_workspace
