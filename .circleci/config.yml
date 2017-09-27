@@ -4,10 +4,6 @@ references:
   container_config: &container_config
     docker:
       - image: node:8.4.0
-        environment:
-          PROJECT_NAME: orangesys
-          CLOUDSDK_COMPUTE_ZONE: asia-east1-c
-          CLUSTER_NAME: orangesysio
     working_directory: ~/app
 
   workspace_root: &workspace_root
@@ -83,14 +79,16 @@ jobs:
   deploy:
     <<: *container_config
     docker:
-      - image: google/cloud-sdk   
+      - image: google/cloud-sdk
+        environment:
+          PROJECT_NAME: orangesys
+          SHORT_HASH: $(echo $CIRCLE_SHA1 | cut -c -7)
     steps:
       - *attach_workspace
       - *load_code
       - run:
           name: Deploy to Google App Engine
           command: |
-            SHORT_HASH=$(echo $CIRCLE_SHA1 | cut -c -7)
             echo $GCLOUD_SERVICE_KEY | base64 --decode -i > ${HOME}/account-auth.json
             gcloud auth activate-service-account --key-file ${HOME}/account-auth.json
             gcloud -q config set project $GCE_PROJECT
