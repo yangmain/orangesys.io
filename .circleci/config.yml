@@ -50,6 +50,7 @@ jobs:
       - run:
           name: test orangesys.io
           command: |
+            export PATH="$(npm bin):$PATH"
             gulp build:theme
       - run:
           command: |
