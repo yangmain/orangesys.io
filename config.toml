@@ -1,6 +1,6 @@
 baseurl = "."
 languageCode = "ja"
-title = "Orangesys"
+title = "Orangesys Inc."
 theme = "vamp-theme"
 metadataformat = "yaml"
 canonifyurls = true
