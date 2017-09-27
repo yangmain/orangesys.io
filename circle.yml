@@ -10,7 +10,7 @@ machine:
     GCE_PROJECT: saas-orangesys-io
     CLOUDSDK_COMPUTE_ZONE: asia-northeast1-c
     SHORT_HASH: $(echo $CIRCLE_SHA1 | cut -c -7)
-    GOHUGOVERSION: "0.26"
+    GOHUGOVERSION: "0.29"
 
 dependencies:
   override:
