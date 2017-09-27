@@ -66,6 +66,8 @@ jobs:
     docker:
       - image: cibuilds/hugo:0.29
     steps:
+      - *attach_workspace
+      - *load_code
       - run:
           name: Run hugo
           command: hugo
