@@ -82,7 +82,6 @@ jobs:
       - image: google/cloud-sdk
         environment:
           GCE_PROJECT: saas-orangesys-io
-          SHORT_HASH: $(echo $CIRCLE_SHA1 | cut -c -7)
     steps:
       - *attach_workspace
       - *load_code
@@ -93,8 +92,8 @@ jobs:
             echo $GCLOUD_SERVICE_KEY | base64 --decode -i > ${HOME}/account-auth.json
             gcloud auth activate-service-account --key-file ${HOME}/account-auth.json
             gcloud -q config set project $GCE_PROJECT
-            gcloud -q app deploy app.yaml --promote --version=$SHORT_HASH
-            curl -s -S -X POST --data-urlencode "payload={'channel': '#ops', 'text': ':earth_asia: :fire: release $CIRCLE_PROJECT_REPONAME (SHA1 ${SHORT_HASH} completed (build $CIRCLE_BUILD_NUM)' }" $SLACK_OPS >/dev/null
+            gcloud -q app deploy app.yaml --promote --version=${CIRCLE_SHA1:0:6}
+            curl -s -S -X POST --data-urlencode "payload={'channel': '#ops', 'text': ':earth_asia: :fire: release $CIRCLE_PROJECT_REPONAME (SHA1 ${CIRCLE_SHA1:0:6} completed (build $CIRCLE_BUILD_NUM)' }" $SLACK_OPS >/dev/null
 workflows:
   version: 2
   build-and-deploy:
