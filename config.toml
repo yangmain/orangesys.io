@@ -4,6 +4,7 @@ title = "Orangesys"
 theme = "vamp-theme"
 metadataformat = "yaml"
 canonifyurls = true
+pygmentsCodeFences = true
 
 # Enable Google Analytics by entering your tracking id
 googleAnalytics = ""

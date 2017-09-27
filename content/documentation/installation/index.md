@@ -10,9 +10,11 @@ title: Installation
 * orangesys jwt tokenが必要。登録後、ログイン画面に表示します。
 
 #### ansible galaxy install
+
 * ansible-galaxy install orangesys.telegraf
 * [orangesys.telegraf](https://galaxy.ansible.com/orangesys/telegraf/)
 
 #### Install orangesys agent 手動インストール
+
 * [Ubuntu & Debian](/documentation/installation/ubuntu-debian)
 * [Redhat & Centos & Amazon Linux](/documentation/installation/redhat-centos)

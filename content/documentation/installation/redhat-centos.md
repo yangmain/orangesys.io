@@ -5,16 +5,16 @@ title: Installation
 
 ### Redhat & Centos & Amazon Linux
 
->```
- wget　https://github.com/orangesys/telegraf-output-orangesys/releases/download/1.3.2/telegraf-1.3.2-1.x86_64.rpm
- sudo yum localinstall telegraf-1.3.2-1.x86_64.rpm
+>```bash
+ wget　https://github.com/orangesys/telegraf-output-orangesys/releases/download/1.4.0/telegraf-1.4.0-1.x86_64.rpm
+ sudo yum localinstall telegraf-1.4.0-1.x86_64.rpm
 >```
 
 ### telegraf.conf設定
 
 登録後、jwt tokenを表示します。
 
->```
+>```yaml
 [global_tags]
 [agent]
   interval = "10s"
@@ -57,12 +57,12 @@ title: Installation
 
 ### サービス再起動
 
->```
+>```bash
  sudo service telegraf start
 >```
 
 #### CentOS 7+, RHEL 7+
 
->```
+>```bash
   sudo systemctl start telegraf
 >```

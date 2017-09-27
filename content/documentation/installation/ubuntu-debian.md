@@ -5,16 +5,16 @@ title: Installation
 
 ### Ubuntu & Debian
 
->```
-wget https://github.com/orangesys/telegraf-output-orangesys/releases/download/1.3.2/telegraf-1.3.2_linux_amd64.tar.gz
-sudo dpkg -i telegraf-1.3.2_linux_amd64.tar.gz
->```
+```bash
+wget https://github.com/orangesys/telegraf-output-orangesys/releases/download/1.4.0/telegraf_1.4.0-1_amd64.deb
+sudo dpkg -i telegraf_1.4.0-1_amd64.deb
+```
 
 ### telegraf.conf設定例
 
 登録後、jwt_tokenを表示します。
 
->```
+```yaml
 [global_tags]
 [agent]
   interval = "10s"
@@ -53,16 +53,16 @@ sudo dpkg -i telegraf-1.3.2_linux_amd64.tar.gz
   interfaces = ["eth0"]
 [[inputs.netstat]]
 [[outputs.influxdb]]
->```
+```
 
 ### サービス再起動
 
->```
+```bash
   sudo service telegraf start
->```
+```
 
 #### Ubuntu 15.04+, Debian 8+
 
->```
+```bash
   sudo systemctl start telegraf
->```
+```
