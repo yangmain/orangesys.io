@@ -11,9 +11,8 @@ googleAnalytics = ""
 
 [params]
 	# General information
-	author = "orangesys.io"
+	author = "orangesys Inc."
 	description = "Orangesys - OpenSaaS monitoring"
-	copyright = "Released under the Apache 2 license"
 
 	# Repository
 	provider = "GitHub"
