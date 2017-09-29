@@ -841,7 +841,7 @@ body {
 
 .hero-space {
   padding-top: 54px;
-  padding-bottom: 0;
+  padding-bottom: 30px;
   background: #FF8224;
   position: relative; }
   @media all and (min-width: 321px) {
