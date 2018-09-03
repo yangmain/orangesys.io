@@ -65,6 +65,9 @@ jobs:
       - *attach_workspace
       - *load_code
       - run:
+          name: Show hugo version
+          command: hugo version
+      - run:
           name: Run hugo
           command: hugo
       - run:
