@@ -2,6 +2,9 @@
 public
 node_modules
 
+# virtualenv python
+python2
+
 # exclude everything
 themes/vamp-theme
 
