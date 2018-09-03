@@ -60,7 +60,7 @@ jobs:
   build_content:
     <<: *container_config
     docker:
-      - image: cibuilds/hugo:0.29
+      - image: cibuilds/hugo
     steps:
       - *attach_workspace
       - *load_code
