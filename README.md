@@ -11,7 +11,7 @@ Web theme is based on [magneticio/vamp.io](https://github.com/magneticio/vamp.io
 
 2. Download Hugo from [http://gohugo.io](http://gohugo.io) or install using Homebrew:
 
-        $ brew update && brew install hugo
+        $ brew update && brew install hugo@0.30
 
 3. Build the vamp-theme by installing node modules and running gulp
 
