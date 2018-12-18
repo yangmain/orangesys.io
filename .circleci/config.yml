@@ -20,7 +20,7 @@ load_code: &load_code
       fi
 
 js_cache_key: &js_cache_key
-  key: dependency-npm-v1-{{ checksum "yarn.lock" }}
+  key: dependency-npm-v1-{{ checksum "package.json" }}
 
 version: 2.0
 
@@ -36,7 +36,7 @@ jobs:
           command: |
             if [ ! -d node_modules ]; then
               set -exu
-              yarn --pure-lockfile --no-progress
+              npm i
             fi
       - save_cache:
           <<: *js_cache_key
