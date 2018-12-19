@@ -6,26 +6,26 @@
   "dependencies": {
     "browser-sync": "^2.17.5",
     "colors": "^1.1.2",
-    "del": "^3.0.0",
-    "directory-tree": "^2.1.0",
+    "del": "^2.2.2",
+    "directory-tree": "^1.1.1",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean-css": "^3.10.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.13",
     "gulp-concat": "^2.6.0",
     "gulp-if": "^2.0.1",
-    "gulp-imagemin": "^4.1.0",
+    "gulp-imagemin": "^3.0.3",
     "gulp-inject-string": "^1.1.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^3.0.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
     "hugo-lunr": "0.0.4",
-    "lunr": "^2.3.3",
+    "lunr": "^0.7.2",
     "merge-stream": "^1.0.0",
-    "remove-markdown": "^0.3.0",
-    "yarn": "^1.10.1"
+    "remove-markdown": "^0.1.0",
+    "yarn": "^0.27.5"
   },
   "devDependencies": {
-    "gulp-shell": "^0.6.5",
+    "gulp-shell": "^0.5.2",
     "gulp-useref": "^3.1.2"
   },
   "scripts": {

@@ -1,29 +1,28 @@
+container_config: &container_config
+  docker:
+    - image: node:6.9.1
+  working_directory: ~/app
+
+workspace_root: &workspace_root
+  /tmp/workspace
+
+attach_workspace: &attach_workspace
+  attach_workspace:
+    at: *workspace_root
+
+load_code: &load_code
+  run:
+    name: load code from workspace
+    command: |
+      # Move all files and dotfiles to current directory
+      if [ -d "/tmp/workspace/app/" ]; then
+        mv /tmp/workspace/app/* /tmp/workspace/app/.[!.]* .
+      fi
+
+js_cache_key: &js_cache_key
+  key: dependency-npm-v1-{{ checksum "package.json" }}
+
 version: 2.0
-
-references:
-  container_config: &container_config
-    docker:
-      - image: node:8.4.0
-    working_directory: ~/app
-
-  workspace_root: &workspace_root
-    /tmp/workspace
-
-  attach_workspace: &attach_workspace
-    attach_workspace:
-      at: *workspace_root
-
-  load_code: &load_code
-    run:
-      name: load code from workspace
-      command: |
-        # Move all files and dotfiles to current directory
-        if [ -d "/tmp/workspace/app/" ]; then
-          mv /tmp/workspace/app/* /tmp/workspace/app/.[!.]* .
-        fi
-
-  js_cache_key: &js_cache_key
-    key: dependency-npm-{{ checksum "yarn.lock" }}
 
 jobs:
   build_theme:
@@ -37,7 +36,7 @@ jobs:
           command: |
             if [ ! -d node_modules ]; then
               set -exu
-              yarn --pure-lockfile --no-progress
+              npm i --quiet
             fi
       - save_cache:
           <<: *js_cache_key
