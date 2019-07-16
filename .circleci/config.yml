@@ -8,9 +8,9 @@ jobs:
       - run:
           name: "Run hugo"
           command: hugo
-      - run:
-          name: "test website"
-          command: htmlproofer public --allow-has-href --check-html --empty-alt-ignore --disable-external
+      # - run:
+      #     name: "test website"
+      #     command: htmlproofer public --allow-has-href --check-html --empty-alt-ignore --disable-external
 
 workflows:
   version: 2
