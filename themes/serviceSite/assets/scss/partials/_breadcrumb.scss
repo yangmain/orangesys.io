@@ -1,0 +1,27 @@
+.breadcrumb {
+  display: flex;
+  padding: 20px 0;
+  li {
+    font-size: $font-size-xs;
+    list-style: none;
+
+    &::after {
+      content: ">";
+      margin: 0 4px;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    a {
+      font-weight: bold;
+      transition: color .3s ease;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}

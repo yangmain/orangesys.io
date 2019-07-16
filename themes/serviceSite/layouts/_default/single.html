@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    {{ partial "head" . }}
+    <body>
+        {{ partial "header.html" . }}
+        <div class="content" id="content">
+          <div class="content-wrap">
+            <ol class="breadcrumb">
+              {{- template "breadcrumb" (dict "node" . "start" .) }}
+            </ol>
+            <div class="content-body">
+              {{ .Content }}
+            </div>
+          </div>
+        </div>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

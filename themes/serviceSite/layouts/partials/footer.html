@@ -1,0 +1,9 @@
+<footer>
+  <ul>
+    {{ range .Site.Data.common.footer }}
+      <li><a href="{{.link}}">{{ .label }}</a></li>
+    {{ end }}
+  </ul>
+
+  <div>©︎ Orangesys 2019</div>
+</footer>

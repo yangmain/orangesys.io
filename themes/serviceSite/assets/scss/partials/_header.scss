@@ -1,0 +1,127 @@
+$header-height: 100px;
+$small-header-height: 60px;
+header {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 23px rgba(71, 71, 71, 0.17);
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  &.is-active {
+    img {
+      width: 30px;
+    }
+    .wrapper {
+      height: $small-header-height;
+    }
+    .header-pc-nav {
+      a {
+        height: $small-header-height;
+      }
+    }
+    .header-mobile-nav {
+      top: $small-header-height;
+      height: calc(100vh - #{$small-header-height});
+    }
+  }
+
+  .wrapper {
+    transition: height .3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: $header-height;
+  }
+
+  .header-gnavi {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .header-pc-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 70px;
+    li {
+      margin-right: 50px;
+
+      a  {
+        position: relative;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        color: $color-gray-1;
+
+        &:hover, &.is-active {
+          &::after {
+            width: 120%;
+          }
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 0;
+          left: 50%;
+          transform: translate(-50%);
+          height: 4px;
+          background: $color-primary;
+          position: absolute;
+          top: calc(100% - 4px);
+          transition: width .2s ease;
+        }
+      }
+    }
+  }
+
+  .header-mobile-nav-btn {
+    display: none;
+    position: relative;
+    img {
+      width: 18px;
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .header-pc-nav, .header-github {
+      display: none;
+    }
+    .header-mobile-nav-btn {
+      display: block;
+    }
+  }
+}
+
+.header-mobile-nav {
+  display: none;
+  position: fixed;
+  background: $content-background;
+  width: 100%;
+  left: 0;
+  top: $header-height;
+  height: calc(100vh - #{$header-height});
+  z-index: 9;
+
+  li {
+    height: calc((100vh - #{$header-height}) / 4);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      height: auto;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    display: none;
+  }
+}

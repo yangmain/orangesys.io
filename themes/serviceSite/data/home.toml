@@ -1,0 +1,60 @@
+[[feature]]
+  title = "手軽な導入<br>簡単な設定"
+  description = "telegraf-orangesysを<br>インストールするだけで導入でき<br>設定も簡単"
+
+[[feature]]
+  title = "カスタマイズ可能な<br>ダッシュボード"
+  description = "Grafana Dashboardsを使用し<br>データビューとフィルタリングで<br>メトリックを可視化"
+
+[[feature]]
+  title = "柔軟で多様な<br>通知設定"
+  description = "直感的な監視項目・閾値の設定<br>SlackやWebhookなどへの<br>柔軟な通知が可能"
+
+[[feature]]
+  title = "メトリックの収集<br>が簡単"
+  description = "プログラムやライブラリを使用し<br>簡単にメトリックを送信"
+
+[[feature]]
+  title = "グラフの共有も<br>可能"
+  description = "GrafanaのグラフをURLで<br>共有することが可能"
+
+[[feature]]
+  title = "外形監視にも対応"
+  description = "URLを利用し外部から自由に<br>監視することができます"
+
+[[feature]]
+  title = "Prometheusに関する<br>特徴"
+  description = "Prometheus機能による強みを<br>ここに追加する"
+  isNew = true
+
+
+[price]
+  [price.push]
+    label = "Push型監視プラン"
+    [[price.push.plans]]
+      name = "Startup"
+      price = "<span>5</span>万円"
+      graph = "10日間"
+      strage = "10GB"
+      [price.push.plans.button]
+        label = "Get started"
+        link = "https://app.orangesys.io/"
+    [[price.push.plans]]
+      name = "Premium"
+      price = "<span>50</span>万円"
+      graph = "400日間"
+      strage = "100GB"
+      [price.push.plans.button]
+        label = "Contact us"
+        link = "mailto:hello@orangesys.io"
+
+  [price.pull]
+    label = "Pull型監視プラン"
+    [[price.pull.plans]]
+      name = "Prometheus"
+      price = "<span>1</span>万円〜"
+      graph = "400日間"
+      strage = ""
+      [price.pull.plans.button]
+        label = "Get started"
+        link = "https://app.orangesys.io/"

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    {{ partial "head" . }}
+    <body>
+        {{ partial "header.html" . }}
+        <div id="content">
+          <section class="home-main wrapper">
+            <h2>Monitorning<br>Dynamic Infrastructure<br>at Scale</h2>
+            <p>Orangesysの強みに関する文章を入れる。<br>
+              ここにPrometheusに関する情報を入れる、テキスト<br>
+              テキストテキストテキストテキストテキスト<br>
+              テキストテキストテキストテキスト</p>
+            <img src="{{.Site.BaseURL}}/img/pages/home-catch.png" alt="{{ .Site.Title }}" class="home-main-img">
+            <div class="home-main-control">
+              <a class="btn btn-primary" href="{{ .Site.Data.common.links.app }}" target="_blank" rel="nofollow">Try Orangesys</a>
+              <a class="btn btn-normal" href="{{ .Site.Data.common.links.feature }}">Learn more</a>
+            </div>
+          </section>
+          <section class="home-section home-feature">
+            <div class="home-feature-catch">
+              <div class="wrapper">
+                <div class="home-section-ttl">
+                  <h2>Why Orangesys loved?</h2>
+                  <p>Orangesysの特徴</p>
+                </div>
+                <img src="{{.Site.BaseURL}}/img/pages/home-feature.png" alt="orangesysの特徴">
+              </div>
+            </div>
+            <ul class="wrapper home-feature-list">
+              {{ range .Site.Data.home.feature }}
+                <li class="{{ if .isNew }}is-new{{ end }}">
+                  <div class="home-feature-list-wrap">
+                    <h3>{{ .title | safeHTML }}</h3>
+                    <p>{{ .description | safeHTML }}</p>
+                  </div>
+                </li>
+              {{ end }}
+            </ul>
+            <div class="wrapper home-feature-plugin">
+              <h3>100種類以上の多様なプラグイン</h3>
+              <img src="{{.Site.BaseURL}}/img/pages/home-plugin.png" alt="100種類以上の多様なプラグイン">
+            </div>
+          </section>
+          <section class="home-section home-price">
+            <div class="home-section-ttl wrapper">
+              <h2>Plans & Pricing</h2>
+              <p>料金プラン</p>
+            </div>
+            <div class="home-price-wrap wrapper">
+              <div class="home-price-push">
+                <h3>{{ .Site.Data.home.price.push.label }}</h3>
+                <ul>
+                  {{ range .Site.Data.home.price.push.plans }}
+                    <li>
+                      <h3>{{ .name }}</h3>
+                      <div class="home-price-plan">
+                        月額
+                        <span class="home-price-plan-price">{{ .price | safeHTML }}</span>
+                      </div>
+                      <div class="home-price-plan-detail">
+                        <dl>
+                          <dt>グラフ表示期間</dt>
+                          <dd>{{ .graph }}</dd>
+                        </dl>
+                        <dl>
+                          <dt>ストレージ</dt>
+                          <dd>{{ .strage }}</dd>
+                        </dl>
+                      </div>
+                      <a class="btn btn-normal" href="{{ .button.link }}">{{ .button.label }}</a>
+                    </li>
+                  {{ end }}
+                </ul>
+              </div>
+              <div class="home-price-pull">
+                <h3>{{ .Site.Data.home.price.pull.label }}</h3>
+                <ul>
+                  {{ range .Site.Data.home.price.pull.plans }}
+                    <li>
+                      <h3>{{ .name }}</h3>
+                      <div class="home-price-plan">
+                        月額
+                        <span class="home-price-plan-price">{{ .price | safeHTML }}</span>
+                      </div>
+                      <div class="home-price-plan-detail">
+                        <dl>
+                          <dt>グラフ表示期間</dt>
+                          <dd>{{ .graph }}</dd>
+                        </dl>
+                      </div>
+                      <a class="btn btn-normal" href="{{ .button.link }}">{{ .button.label }}</a>
+                    </li>
+                  {{ end }}
+                </ul>
+              </div>
+            </div>
+            <div class="home-price-control">
+              <a class="page-link" href="{{ .Site.Data.common.links.price }}">
+                More info
+              </a>
+            </div>
+          </section>
+        </div>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

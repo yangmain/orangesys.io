@@ -1,0 +1,31 @@
+[[menus]]
+  label= "Orangesysの特徴"
+  link= "/feature"
+[[menus]]
+  label= "料金プラン"
+  link= "/price"
+[[menus]]
+  label= "導入について"
+  link= "/installations"
+[[menus]]
+  label= "利用規約"
+  link= "/terms"
+
+
+[[footer]]
+  label= "運営企業"
+  link= "/about"
+[[footer]]
+  label= "利用規約"
+  link= "/terms"
+[[footer]]
+  label="特定商取引に関する表記"
+  link="/law"
+[[footer]]
+  label="プライバシーポリシー"
+  link="/privacy"
+
+[links]
+  app = "https://app.orangesys.io/"
+  feature = "/feature"
+  price = "/price"

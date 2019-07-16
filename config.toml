@@ -1,7 +1,7 @@
 baseurl = "."
 languageCode = "ja"
 title = "Orangesys Inc."
-theme = "vamp-theme"
+theme = "serviceSite"
 metadataformat = "yaml"
 canonifyurls = true
 pygmentsCodeFences = true
@@ -57,29 +57,3 @@ googleAnalytics = ""
 	fractions = true
 	smartDashes = true
 	plainIDAnchors = true
-
-[[menu.main]]
-	name   = "WHAT IS Orangesys?"
-	url    = "/what-is-orangesys/"
-	weight = 10
-
-[[menu.main]]
-	name   = "TRY Orangesys"
-	url    = "/app/"
-	weight = 20
-
-
-[[menu.main]]
-	name   = "RESOURCES"
-	url    = "resources/"
-	weight = 30
-
-[[menu.main]]
-	name   = "NEWS"
-	url    = "news/"
-	weight = 40
-
-[[menu.main]]
-	name   = "SUPPORT"
-	url    = "support/"
-	weight = 50
