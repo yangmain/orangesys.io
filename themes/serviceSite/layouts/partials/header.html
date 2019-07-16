@@ -1,0 +1,27 @@
+<header id="header">
+  <div class="wrapper">
+    <div class="header-gnavi">
+      <a href="{{.Site.BaseURL}}">
+        <h1><img src="{{.Site.BaseURL}}/img/common/logo.png" alt="{{ .Site.Title }}"></h1>
+      </a>
+      <ul class="header-pc-nav">
+        {{ range .Site.Data.common.menus }}
+          <li><a href="{{.link}}"><span>{{ .label }}</span></a></li>
+        {{ end }}
+      </ul>
+    </div>
+    <a class="header-github" href="{{ .Site.Params.repo_url}}" target="_blank" rel="nofollow">
+      <img src="{{.Site.BaseURL}}/img/common/github.png" alt="{{ .Site.Title }}">
+    </a>
+    <div id="mobileNavBtn" class="header-mobile-nav-btn">
+      <img src="{{.Site.BaseURL}}/img/common/nav.png" alt="メニュー">
+    </div>
+    <div id="mobileNav" class="header-mobile-nav">
+      <ul>
+        {{ range .Site.Data.common.menus }}
+          <li><a href="{{.link}}"><span>{{ .label }}</span></a></li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</header>
