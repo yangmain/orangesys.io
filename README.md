@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/orangesys/orangesys.io.svg?style=svg)](https://circleci.com/gh/orangesys/orangesys.io)
+[![CircleCI](https://circleci.com/gh/orangesys/orangesys.io.svg?style=svg)](https://circleci.com/gh/orangesys/orangesys.io) [![Netlify Status](https://api.netlify.com/api/v1/badges/133915d1-73cc-4ea5-8c08-8e33a581cdca/deploy-status)](https://app.netlify.com/sites/quizzical-davinci-efa3b8/deploys)
 # New orangesys.io
 
 Web theme is based on [magneticio/vamp.io](https://github.com/magneticio/vamp.io) site.
