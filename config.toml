@@ -19,8 +19,7 @@ googleAnalytics = ""
 	repo_url = "https://github.com/orangesys"
 
 	version = "0.1.0"
-	logo = "images/logo.svg"
-	favicon = "images/logo.svg"
+	logo = "images/common/logo.png"
 
 	permalink = "#"
 
