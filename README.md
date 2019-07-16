@@ -11,18 +11,9 @@ Web theme is based on [magneticio/vamp.io](https://github.com/magneticio/vamp.io
 
 2. Download Hugo from [http://gohugo.io](http://gohugo.io) or install using Homebrew:
 
-        $ brew update && brew install hugo@0.30
+        $ brew update && brew install hugo
 
-3. Build the vamp-theme by installing node modules and running gulp
-
-        $ brew install python@2
-        $ export PATH="/usr/local/opt/python@2/bin:$PATH"
-        $ cd orangesys && python -m virtualenv python2
-        $ source python2/bin/activate
-        $ npm install -g yarn && yarn && gulp build:dev
-
-
-4. Run hugo in watch mode and start adding content under the `content/` tree
+3. Run hugo in watch mode and start adding content under the `content/` tree
 
         $ hugo server --watch
 

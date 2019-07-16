@@ -1,4 +1,4 @@
-baseurl = "."
+baseurl = "https://quizzical-davinci-efa3b8.netlify.com/"
 languageCode = "ja"
 title = "Orangesys Inc."
 theme = "serviceSite"
