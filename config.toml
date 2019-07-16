@@ -47,13 +47,3 @@ googleAnalytics = ""
     [params.font]
     	text = "Roboto"
     	code = "Roboto Mono"
-
-[social]
-	twitter = "magneticio"
-	github  = "magneticio/vamp"
-
-[blackfriday]
-	smartypants	= true
-	fractions = true
-	smartDashes = true
-	plainIDAnchors = true
