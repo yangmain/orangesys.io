@@ -11,3 +11,14 @@ jobs:
       - run:
           name: "test website"
           command: htmlproofer public --allow-has-href --check-html --empty-alt-ignore --disable-external
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore:
+                - master
+                - release
