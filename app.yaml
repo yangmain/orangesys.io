@@ -3,11 +3,6 @@ api_version: go1
 threadsafe: true
 
 handlers:
-- url: /\.well-known/acme-challenge/(.+)
-  static_files: letsencrypt/\1
-  upload: letsencrypt/(.+)
-  mime_type: text/plain
-
 - url: /.*
   script: _go_app
   secure: always

@@ -1,3 +1,10 @@
+workspace_root: &workspace_root
+  /tmp/workspace
+
+attach_workspace: &attach_workspace
+  attach_workspace:
+    at: *workspace_root
+
 version: 2.0
 jobs:
   build:
@@ -7,10 +14,30 @@ jobs:
       - checkout
       - run:
           name: "Run hugo"
-          command: hugo
-      # - run:
-      #     name: "test website"
-      #     command: htmlproofer public --allow-has-href --check-html --empty-alt-ignore --disable-external
+          command: hugo -b orangesys.io
+      - run:
+          command: |
+            mkdir -p /tmp/workspace/app
+            mv * .[!.]* /tmp/workspace/app/
+      - persist_to_workspace:
+          root: *workspace_root
+          paths:
+            - app
+  deploy:
+    docker:
+      - image: google/cloud-sdk
+        environment:
+          GCE_PROJECT: saas-orangesys-io
+    steps:
+      - *attach_workspace
+      - run:
+          name: Deploy to Google App Engine
+          command: |
+            echo $GCLOUD_SERVICE_KEY | base64 --decode -i > ${HOME}/account-auth.json
+            gcloud auth activate-service-account --key-file ${HOME}/account-auth.json
+            gcloud -q config set project $GCE_PROJECT
+            gcloud -q app deploy app.yaml --promote --version=${CIRCLE_SHA1:0:7}
+            curl -s -S -X POST --data-urlencode "payload={'channel': '#ops', 'text': ':earth_asia: :fire: release $CIRCLE_PROJECT_REPONAME (SHA1 ${CIRCLE_SHA1:0:7} completed (build $CIRCLE_BUILD_NUM)' }" $SLACK_OPS >/dev/null      
 
 workflows:
   version: 2
@@ -22,3 +49,9 @@ workflows:
               ignore:
                 - master
                 - release
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: release
