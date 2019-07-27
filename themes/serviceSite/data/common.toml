@@ -7,9 +7,9 @@
 [[menus]]
   label= "導入について"
   link= "/installations"
-[[menus]]
-  label= "利用規約"
-  link= "/terms"
+#[[menus]]
+#  label= "利用規約"
+#  link= "/terms"
 
 
 [[footer]]

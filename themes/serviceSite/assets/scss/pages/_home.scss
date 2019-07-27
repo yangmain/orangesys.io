@@ -1,7 +1,8 @@
 .home-section {
   .home-section-ttl {
     h2 {
-      font-size: $font-size-xl;
+      font-size: $font-size-l;
+      color: $color-primary;
       font-weight: bold;
     }
     p {
@@ -26,7 +27,7 @@
   padding: 100px 35px 0 35px;
 
   h2 {
-    font-size: $font-size-catch;
+    font-size: $font-size-xl;
     font-weight: bold;
     margin: 72px 0 20px 0;
     line-height: 1.5;
