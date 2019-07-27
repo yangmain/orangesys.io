@@ -81,7 +81,7 @@
                         </dl>
                         <dl>
                           <dt>ストレージ</dt>
-                          <dd>{{ .strage }}</dd>
+                          <dd>{{ .storage }}</dd>
                         </dl>
                       </div>
                       <a class="btn btn-normal" href="{{ .button.link }}">{{ .button.label }}</a>
@@ -97,13 +97,13 @@
                       <h3>{{ .name }}</h3>
                       <div class="home-price-plan">
                         月額
-                        <span class="home-price-plan-price">{{ .price | safeHTML }}</span>
+                        <span class="home-price-plan-price">{{ .price | safeHTML }}<br>※従量課金</span>
                       </div>
                       <div class="home-price-plan-detail">
                         <dl>
                           <dt>グラフ表示期間</dt>
                           <dd>{{ .graph }}</dd>
-                        </dl>
+                        </dl>                                              
                       </div>
                       <a class="btn btn-normal" href="{{ .button.link }}">{{ .button.label }}</a>
                     </li>

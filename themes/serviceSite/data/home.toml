@@ -35,7 +35,7 @@
       name = "Startup"
       price = "<span>5</span>万円"
       graph = "10日間"
-      strage = "10GB"
+      storage = "10GB"
       [price.push.plans.button]
         label = "Get started"
         link = "https://app.orangesys.io/"
@@ -43,7 +43,7 @@
       name = "Premium"
       price = "<span>50</span>万円"
       graph = "400日間"
-      strage = "100GB"
+      storage = "100GB"
       [price.push.plans.button]
         label = "Contact us"
         link = "mailto:hello@orangesys.io"
@@ -54,7 +54,7 @@
       name = "Prometheus"
       price = "<span>1</span>万円〜"
       graph = "400日間"
-      strage = ""
+      storage = "従量課金"
       [price.pull.plans.button]
-        label = "Get started"
-        link = "https://app.orangesys.io/"
+        label = "Contact us"
+        link = "mailto:hello@orangesys.io"
