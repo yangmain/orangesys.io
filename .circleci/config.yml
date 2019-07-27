@@ -5,6 +5,15 @@ attach_workspace: &attach_workspace
   attach_workspace:
     at: *workspace_root
 
+load_code: &load_code
+  run:
+    name: load code from workspace
+    command: |
+      # Move all files and dotfiles to current directory
+      if [ -d "/tmp/workspace/app/" ]; then
+        mv /tmp/workspace/app/* /tmp/workspace/app/.[!.]* .
+      fi
+
 version: 2.0
 jobs:
   build:
@@ -30,6 +39,7 @@ jobs:
           GCE_PROJECT: saas-orangesys-io
     steps:
       - *attach_workspace
+      - *load_code
       - run:
           name: Deploy to Google App Engine
           command: |
