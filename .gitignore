@@ -1,6 +1,6 @@
 .idea
 public
-node_modules
+resources
 
 # virtualenv python
 python2
@@ -50,4 +50,3 @@ ehthumbs.db
 Thumbs.db
 
 pip-selfcheck.json
-resources/
