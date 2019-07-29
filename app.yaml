@@ -6,5 +6,5 @@ handlers:
   script: _go_app
   secure: always
 
-skip_files: |
+skip_files: 
 - ^(?!main\.go|public)
