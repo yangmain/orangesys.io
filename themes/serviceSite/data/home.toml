@@ -46,7 +46,7 @@
       storage = "100GB"
       [price.push.plans.button]
         label = "Contact us"
-        link = "mailto:hello@orangesys.io"
+        link = "https://forms.gle/j7dLng44b3rV5sxN8"
 
   [price.pull]
     label = "Pull型監視プラン"
@@ -57,4 +57,4 @@
       storage = "従量課金"
       [price.pull.plans.button]
         label = "Contact us"
-        link = "mailto:hello@orangesys.io"
+        link = "https://forms.gle/j7dLng44b3rV5sxN8"
