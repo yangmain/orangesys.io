@@ -8,4 +8,4 @@ title: 運営企業
 我々は、「人間の知識は世界に属している」と考えています。そこで、最新のソフトウェア開発ツールを活用して、統合プラットフォームを構築しています。
 
 ## Contact
-You can contact us please [contact us](mailto:hello@orangesys.io)
+You can contact us please [contact us](https://forms.gle/j7dLng44b3rV5sxN8)
