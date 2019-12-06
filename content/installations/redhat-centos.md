@@ -6,8 +6,8 @@ title: Redhat & Centos & Amazon Linux
 ## Redhat & Centos & Amazon Linux
 
 >```bash
- wget　https://github.com/orangesys/telegraf-output-orangesys/releases/download/1.4.0/telegraf-1.4.0-1.x86_64.rpm
- sudo yum localinstall telegraf-1.4.0-1.x86_64.rpm
+ wget　https://github.com/orangesys/telegraf-output-orangesys/releases/download/1.12.6/telegraf-1.12.6-1.arm64.rpm
+ sudo yum localinstall telegraf-1.12.6-1.arm64.rpm
 >```
 
 ## telegraf.conf設定

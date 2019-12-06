@@ -6,8 +6,8 @@ title: Ubuntu & Debian
 ## Ubuntu & Debian
 
 ```bash
-wget https://github.com/orangesys/telegraf-output-orangesys/releases/download/1.4.0/telegraf_1.4.0-1_amd64.deb
-sudo dpkg -i telegraf_1.4.0-1_amd64.deb
+wget https://github.com/orangesys/telegraf-output-orangesys/releases/download/1.12.6/telegraf_1.12.6-1_amd64.deb
+sudo dpkg -i telegraf_1.12.6-1_amd64.deb
 ```
 
 ## telegraf.conf設定例
