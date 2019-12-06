@@ -5,16 +5,16 @@ title: Redhat & Centos & Amazon Linux
 
 ## Redhat & Centos & Amazon Linux
 
->```bash
+```bash
  wget　https://github.com/orangesys/telegraf-output-orangesys/releases/download/1.12.6/telegraf-1.12.6-1.arm64.rpm
  sudo yum localinstall telegraf-1.12.6-1.arm64.rpm
->```
+```
 
 ## telegraf.conf設定
 
 登録後、jwt tokenを表示します。
 
->```yaml
+```yaml
 [global_tags]
 [agent]
   interval = "10s"
@@ -53,16 +53,16 @@ title: Redhat & Centos & Amazon Linux
   interfaces = ["eth0"]
 [[inputs.netstat]]
 [[outputs.influxdb]]
->```
+```
 
 ## サービス再起動
 
->```bash
+```bash
  sudo service telegraf start
->```
+```
 
 ### CentOS 7+, RHEL 7+
 
->```bash
+```bash
   sudo systemctl start telegraf
->```
+```
