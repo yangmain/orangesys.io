@@ -20,13 +20,3 @@ title: 導入について
 
 * [Ubuntu & Debian](/installations/ubuntu-debian)
 * [Redhat & Centos & Amazon Linux](/installations/redhat-centos)
-
-
-<div class="content-control">
-  <a class="page-link" href="/installations/ubuntu-debian">
-    Ubuntu & Debian
-  </a>
-  <a class="page-link" href="/installations/redhat-centos">
-    Redhat & Centos & Amazon Linux
-  </a>
-</div>
