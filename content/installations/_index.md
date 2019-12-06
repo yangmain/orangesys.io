@@ -18,8 +18,8 @@ title: 導入について
 
 ### Install orangesys agent 手動インストール
 
-* [Ubuntu & Debian](/documentation/installation/ubuntu-debian)
-* [Redhat & Centos & Amazon Linux](/documentation/installation/redhat-centos)
+* [Ubuntu & Debian](/installations/ubuntu-debian)
+* [Redhat & Centos & Amazon Linux](/installations/redhat-centos)
 
 
 <div class="content-control">
