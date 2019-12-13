@@ -37,7 +37,7 @@
       graph = "10日間"
       storage = "10GB"
       [price.push.plans.button]
-        label = "Get started"
+        label = "Contact us"
         link = "https://forms.gle/j7dLng44b3rV5sxN8"
     [[price.push.plans]]
       name = "Premium"
