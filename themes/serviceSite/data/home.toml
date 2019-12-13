@@ -38,7 +38,7 @@
       storage = "10GB"
       [price.push.plans.button]
         label = "Get started"
-        link = "https://app.orangesys.io/"
+        link = "https://forms.gle/j7dLng44b3rV5sxN8"
     [[price.push.plans]]
       name = "Premium"
       price = "<span>50</span>万円"
