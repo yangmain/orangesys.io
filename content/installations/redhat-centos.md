@@ -6,8 +6,8 @@ title: Redhat & Centos & Amazon Linux
 ## Redhat & Centos & Amazon Linux
 
 ```bash
- wget　https://github.com/orangesys/telegraf-output-orangesys/releases/download/1.12.6/telegraf-1.12.6-1.arm64.rpm
- sudo yum localinstall telegraf-1.12.6-1.arm64.rpm
+ wget https://github.com/orangesys/telegraf-output-orangesys/releases/download/1.13.0/telegraf-1.13.0-1.x86_64.rpm
+ sudo yum localinstall telegraf-1.13.0-1.x86_64.rpm
 ```
 
 ## telegraf.conf設定
@@ -52,7 +52,6 @@ title: Redhat & Centos & Amazon Linux
 [[inputs.net]]
   interfaces = ["eth0"]
 [[inputs.netstat]]
-[[outputs.influxdb]]
 ```
 
 ## サービス再起動
