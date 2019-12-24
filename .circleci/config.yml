@@ -18,7 +18,7 @@ version: 2.0
 jobs:
   build:
     docker:
-      - image: cibuilds/hugo:latest
+      - image: cibuilds/hugo:0.55.6
     steps:
       - checkout
       - run:
